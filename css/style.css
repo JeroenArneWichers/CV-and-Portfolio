@@ -1,3 +1,7 @@
+body{
+	font-size: 36px;
+}
+
 nav {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -6,12 +10,13 @@ nav {
   align-items: center;
   text-align: center;
   border-bottom: 4px solid black;
-  background: red;
+	background: red;
+	font-size: 24px;
 }
 
 @media screen and (max-width: 900px) {
   nav {
-    grid-template-columns: 100%;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-gap: 1em;
  }
@@ -64,8 +69,8 @@ nav {
 	display: grid;
 	margin: 5em;
 	border: 4px black solid;
-    grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: minmax(280px);
+  grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 324px;
     grid-template-areas: 
 	  "box1 box2 box3"
 	  "box4 box5 box6"
@@ -75,92 +80,369 @@ nav {
 	grid-area: box1;
 	background-color: blue;
 	border: 4px black solid;
+	overflow: hidden;
 }
 .box2 {
 	grid-area: box2;
 	background-color: green;
 	border: 4px black solid;
+	overflow: hidden;
 }
 .box3 {
 	grid-area: box3;
 	background-color: purple;
 	border: 4px black solid;
+	overflow: hidden;
 }
 .box4 {
 	grid-area: box4;
 	background-color: yellow;
 	border: 4px black solid;
+	overflow: hidden;
 }
 .box5 {
 	grid-area: box5;
 	background-color: brown;
 	border: 4px black solid;
+	overflow: hidden;
 }
 .box6 {
 	grid-area: box6;
 	background-color: orange;
 	border: 4px black solid;
+	overflow: hidden;
 }
 
 .cvwrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(1fr 1fr);
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas: 
-      "leftcontent leftcontent rightcontent"
-      "leftcontent leftcontent rightcontent"
-      "leftcontent leftcontent rightcontent"
-	  "eigenschappen talen hobby"
-	  "personalia personalia personalia";
+      "profiel  profielfoto"
+      "algemenevaardigheden  algemenevaardigheden"
+      "organisatorischemanagementvaardigheden  organisatorischemanagementvaardigheden"
+	  	"computervaardigheden computervaardigheden"
+			"taalvaardigheden taalvaardigheden"
+			"managementvaardigheden managementvaardigheden"
+			"skills skills"
+			"juniorwebdeveloper juniorwebdeveloperfoto"
+			"onderzoeker onderzoekerfoto"
+			"vrijwilliger vrijwilligerfoto"
+			"eigenschappen talen"
+			"hobby hobbyfoto"
+			"personalia personaliafoto";
 }
 
-.cvleftcontent {
-    grid-area: leftcontent;
+.cvprofiel {
+	grid-area: profiel;
+background-color: red;
+padding: 20px 20px;
+border-top: 60px black solid;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-top: 60px;
+}
+
+.cvprofielfoto {
+	grid-area: profielfoto;
+background-color: red;
+padding: 20px 20px;
+border-top: 60px black solid;
+border-right: 60px black solid;
+margin-right: 60px;
+margin-top: 60px;
+}
+
+.cvprofielfoto img{
+	border-radius: 50%;
+	margin-top: 70px;
+	margin-right: 70px;
+}
+
+.cvalgemenevaardigheden {
+	grid-area: algemenevaardigheden;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-right: 60px;
+border-right: 60px black solid;
+}
+
+.cvalgemenevaardighedenfoto {
+	grid-area: algemenevaardighedenfoto;
+background-color: red;
+padding: 20px 20px;
+border-right: 60px black solid;
+}
+
+.cvorganisatorischemanagementvaardigheden {
+	grid-area: organisatorischemanagementvaardigheden;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-right: 60px;
+border-right: 60px black solid;
+}
+
+.cvorganisatorischemanagementvaardighedenfoto {
+	grid-area: organisatorischemanagementvaardighedenfoto;
+background-color: red;
+padding: 20px 20px;
+border-right: 60px black solid;
+}
+
+.cvcomputervaardigheden {
+	grid-area: computervaardigheden;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-right: 60px;
+border-right: 60px black solid;
+}
+
+.cvcomputervaardighedenfoto {
+	grid-area: computervaardighedenfoto;
+background-color: red;
+padding: 20px 20px;
+border-right: 60px black solid;
+}
+
+.cvtaalvaardigheden {
+	grid-area: taalvaardigheden;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-right: 60px;
+border-right: 60px black solid;
+}
+
+.cvtaalvaardighedenfoto {
+	grid-area: taalvaardighedenfoto;
+background-color: red;
+padding: 20px 20px;
+border-right: 60px black solid;
+}
+
+.cvmanagementvaardigheden {
+	grid-area: managementvaardigheden;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-right: 60px;
+border-right: 60px black solid;
+}
+
+.cvmanagementvaardighedenfoto {
+	grid-area: managementvaardighedenfoto;
+background-color: red;
+padding: 20px 20px;
+border-right: 60px black solid;
+
+}
+
+.cvmanagementvaardighedenfoto img{
+	position: relative;
+	width:  400px;
+	height: 400px;
+	background-position: 50% 50%;
+	background-repeat:   no-repeat;
+	background-size:     cover;
+	}
+
+.cvskills {
+grid-area: skills;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+margin-right: 60px;
+border-right: 60px black solid;
+}
+
+.cvskillsfoto {
+grid-area: skillsfoto;
+background-color: red;
+padding: 20px 20px;
+border-right: 60px black solid;
+}
+
+.cvjuniorwebdeveloper {
+  grid-area: juniorwebdeveloper;
 	background-color: red;
 	padding: 20px 20px;
 	border-left: 60px black solid;
-	border-top: 60px black solid;
+	margin-left: 60px;
 }
 
-.cvrightcontent {
-    grid-area: rightcontent;
+.cvjuniorwebdeveloperfoto{
+	grid-area: juniorwebdeveloperfoto;
 	background-color: red;
 	padding: 20px 20px;
 	border-right: 60px black solid;
-	border-top: 60px black solid;
+	margin-right: 60px;
+	}
+
+.cvjuniorwebdeveloperfoto img{
+	position: relative;
+	width:  400px;
+	height: 400px;
+	background-position: 50% 50%;
+	background-repeat:   no-repeat;
+	background-size:     cover;
+	border-radius: 50%;
+	margin-right: 60px;
 }
+
+.cvonderzoeker {
+	grid-area: onderzoeker;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+border-left: 60px black solid;
+margin-left: 60px;
+}
+
+.cvonderzoekerfoto {
+	grid-area: onderzoekerfoto;
+	background-color: red;
+	padding: 20px 20px;
+	border-right: 60px black solid;
+	border-right: 60px black solid;
+	margin-right: 60px;
+}
+
+.cvonderzoekerfoto img{
+	position: relative;
+	width:  400px;
+	height: 400px;
+	background-position: 50% 50%;
+	background-repeat:   no-repeat;
+	background-size:     cover;
+	border-radius: 50%;
+	margin-right: 60px;
+}
+
+.cvvrijwilliger {
+	grid-area: vrijwilliger;
+background-color: red;
+padding: 20px 20px;
+border-left: 60px black solid;
+margin-left: 60px;
+}
+
+.cvvrijwilligerfoto {
+	grid-area: vrijwilligerfoto;
+	background-color: red;
+	padding: 20px 20px;
+	border-right: 60px black solid;
+	margin-right: 60px;
+}
+
+.cvvrijwilligerfoto img{
+	position: relative;
+	width:  400px;
+	height: 400px;
+	background-position: 50% 50%;
+	background-repeat:   no-repeat;
+	background-size:     cover;
+	border-radius: 50%;
+	margin-right: 60px;
+}	
 
 .cveigenschappen {
     grid-area: eigenschappen;
 	background-color: red;
 	padding: 20px 20px;
 	border-left: 60px black solid;
+	margin-left: 60px;
+}
+
+.cveigenschappenfoto {
+	grid-area: eigenschappenfoto;
+	background-color: red;
+	padding: 20px 20px;
+	border-right: 60px black solid;
 }
 
 .cvtalen {
     grid-area: talen;
 	background-color: red;
 	padding: 20px 20px;
+	border-right: 60px black solid;
+	margin-right: 60px;
+}
+
+.cvtalenfoto {
+	grid-area: talenfoto;
+	background-color: red;
+	padding: 20px 20px;
+	border-right: 60px black solid;
 }
 
 .cvhobby {
-    grid-area: hobby;
-	background-color: red;
-	padding: 20px 20px;
-	border-right: 60px black solid;
-}
-
-.cvpersonalia {
-    grid-area: personalia;
+  grid-area: hobby;
 	background-color: red;
 	padding: 20px 20px;
 	border-left: 60px black solid;
-	border-right: 60px black solid;
-	border-bottom: 60px black solid;
+	margin-left: 60px;
 }
 
-/*hieronder alle images in de div contentbox1 zijn nu dus float right*/
-.cvleftcontent img{
+.cvhobbyfoto img{
+	position: relative;
+	width:  200px;
+	height: 200px;
+	background-repeat:   no-repeat;
+	background-size:     cover;
+	border-radius: 50%;
+	margin-right: 60px;
+}
+
+.cvhobbyfoto {
+	grid-area: hobbyfoto;
+	background-color: red;
+	padding: 20px 20px;
+	border-right: 60px black solid;
+	margin-right: 60px;
+}
+
+.cvpersonalia {
+  grid-area: personalia;
+	background-color: red;
+	padding: 20px 20px;
+	border-left: 60px black solid;
+	border-bottom: 60px black solid;
+	margin-left: 60px;
+	margin-bottom: 60px;
+}
+
+.cvpersonaliafoto {
+	grid-area: personaliafoto;
+	background-color: red;
+	padding: 20px 20px;
+	border-right: 60px black solid;
+	border-bottom: 60px black solid;
+	margin-right: 60px;
+	margin-bottom: 60px;
+}
+
+.cvpersonaliafoto img{
+	border-radius: 50%;
+	margin-top: 70px;
+	margin-right: 70px;
+}
+
+/*hieronder alle images in de div cvvaardigheden zijn nu dus float right*/
+.cvvaardigheden img{
 	float:left;
 	margin: 20px 20px 20px 20px;
 }
+
+video {
+	pointer-events: none;
+}
+
